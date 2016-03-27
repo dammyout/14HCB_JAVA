@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 26-Mar-2016 11:54:59 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Calamviec" table="calamviec" catalog="db_qlqa" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="calamviec" type="string">
+            <column name="calamviec" length="5" />
+        </property>
+        <property name="ngaylamviec" type="java.lang.Integer">
+            <column name="ngaylamviec" />
+        </property>
+        <property name="tinhtrang" type="string">
+            <column name="tinhtrang" length="45" />
+        </property>
+        <property name="nhanvienxinphepvang" type="string">
+            <column name="nhanvienxinphepvang" length="45" />
+        </property>
+        <property name="nhanvienditre" type="string">
+            <column name="nhanvienditre" length="45" />
+        </property>
+        <property name="chamcong" type="string">
+            <column name="chamcong" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="db_qlqa"/>
+  <table-filter match-name="mon_an"/>
+  <table-filter match-name="ban_an"/>
+  <table-filter match-name="user"/>
+  <table-filter match-name="hoadon"/>
+  <table-filter match-name="calamviec"/>
+  <table-filter match-name="chitiet_hoadon"/>
+  <table-filter match-name="nhanvien"/>
+</hibernate-reverse-engineering>

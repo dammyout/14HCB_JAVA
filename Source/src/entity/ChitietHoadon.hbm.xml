@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 26-Mar-2016 11:54:59 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.ChitietHoadon" table="chitiet_hoadon" catalog="db_qlqa" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="tenmonan" type="string">
+            <column name="tenmonan" length="45" />
+        </property>
+        <property name="soluong" type="java.lang.Integer">
+            <column name="soluong" />
+        </property>
+        <property name="gia" type="java.lang.Float">
+            <column name="gia" precision="12" scale="0" />
+        </property>
+        <property name="ngaythang" type="timestamp">
+            <column name="ngaythang" length="19" />
+        </property>
+        <property name="ghichu" type="string">
+            <column name="ghichu" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>
