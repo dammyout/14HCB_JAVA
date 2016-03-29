@@ -58,15 +58,15 @@
                   <Component id="jBtnRuou" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                   <Component id="jBtnCanhchua" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                   <Component id="jBtnLau" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
-                  <Component id="jBtnBia" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                  <Component id="jBtnBia" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
               </Group>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jBtnMiXao" min="-2" pref="32" max="-2" attributes="0"/>
                           <Component id="jBtnCaNuong" pref="35" max="32767" attributes="0"/>
                           <Component id="jBtnCaHap" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jBtnMiXao" alignment="1" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" attributes="0">
@@ -74,7 +74,7 @@
                       <Component id="jBtnCaKho" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="177" max="32767" attributes="0"/>
+              <EmptySpace pref="179" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
