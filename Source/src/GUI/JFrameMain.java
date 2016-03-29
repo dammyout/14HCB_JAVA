@@ -6,6 +6,7 @@
 package GUI;
 import entity.*;
 import dao.*;
+import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JToolBar;
 
@@ -14,13 +15,14 @@ import javax.swing.JToolBar;
  * @author My PC
  */
 public class JFrameMain extends javax.swing.JFrame {
-    
+    QuanlybanDao   banandao =new QuanlybanDao();
     /**
      * Creates new form JFrameMain
      */
     public JFrameMain() {
         initComponents();        
     }
+    
     
     
     /**
@@ -34,7 +36,6 @@ public class JFrameMain extends javax.swing.JFrame {
 
         jButton2 = new javax.swing.JButton();
         jSeparator7 = new javax.swing.JToolBar.Separator();
-        jToolBar2 = new javax.swing.JToolBar();
         jToolBar3 = new javax.swing.JToolBar();
         jButton6 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -51,7 +52,6 @@ public class JFrameMain extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 204, 204));
         setMinimumSize(new java.awt.Dimension(1300, 700));
-        setPreferredSize(new java.awt.Dimension(1100, 400));
         getContentPane().setLayout(null);
 
         jButton2.setText("Cua hang");
@@ -64,10 +64,6 @@ public class JFrameMain extends javax.swing.JFrame {
         jButton2.setBounds(230, 140, 0, 0);
         getContentPane().add(jSeparator7);
         jSeparator7.setBounds(0, 0, 0, 6);
-
-        jToolBar2.setFloatable(false);
-        getContentPane().add(jToolBar2);
-        jToolBar2.setBounds(420, 60, 220, 2);
 
         jToolBar3.setFloatable(false);
         jToolBar3.setRollover(true);
@@ -102,6 +98,11 @@ public class JFrameMain extends javax.swing.JFrame {
         jButton8.setText("Đổi mật khẩu");
         jButton8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton8.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
         jToolBar4.add(jButton8);
 
         jButton7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -109,10 +110,15 @@ public class JFrameMain extends javax.swing.JFrame {
         jButton7.setText("Thoát");
         jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton7.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
         jToolBar4.add(jButton7);
 
         getContentPane().add(jToolBar4);
-        jToolBar4.setBounds(1090, 0, 150, 90);
+        jToolBar4.setBounds(1100, 0, 150, 90);
         getContentPane().add(jSeparator4);
         jSeparator4.setBounds(70, 60, 0, 78);
 
@@ -124,6 +130,11 @@ public class JFrameMain extends javax.swing.JFrame {
         jButton11.setText("Quản lý bàn ăn");
         jButton11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton11.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
         jToolBar1.add(jButton11);
 
         jBntMonan.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -174,9 +185,28 @@ public class JFrameMain extends javax.swing.JFrame {
         // TODO add your handling code here:
         JlFrameQuanLyNhanVien jf = new JlFrameQuanLyNhanVien();
         jf.setVisible(true);
-        
         jToolBar5.add(jf);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+        JlFrameDoiMatKhau jf=new JlFrameDoiMatKhau();
+        jf.setVisible(true);
+        jToolBar5.add(jf);
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+         System.exit(0);
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        JlFrameQuanLyBan jf = new JlFrameQuanLyBan();
+        jf.setVisible(true);
+        jToolBar5.add(jf);        
+        jf.load();
+        
+    }//GEN-LAST:event_jButton11ActionPerformed
 
     
     /**
@@ -235,7 +265,6 @@ public class JFrameMain extends javax.swing.JFrame {
     private javax.swing.JToolBar.Separator jSeparator4;
     private javax.swing.JToolBar.Separator jSeparator7;
     private javax.swing.JToolBar jToolBar1;
-    private javax.swing.JToolBar jToolBar2;
     private javax.swing.JToolBar jToolBar3;
     private javax.swing.JToolBar jToolBar4;
     private javax.swing.JToolBar jToolBar5;

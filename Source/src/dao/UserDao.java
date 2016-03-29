@@ -48,6 +48,22 @@ public class UserDao {
         }
         return false;
     } 
+    public boolean DoiMK (String tk,String mk){  
+      
+         for (User user :this.finAll()){
+             System.out.print(user.getUsername());
+            if(tk.equals(user.getUsername())&&  mk.equals(user.getPass())){
+                
+                System.out.print("Doi thanh công; "); 
+               return true;
+            }
+            else{
+            System.out.print("Dang nhap that bai; ");
+            
+            }
+        }
+        return false;
+    } 
     
     public User find(String ten_nhan_vien){
         User nhan_vien = new User();
